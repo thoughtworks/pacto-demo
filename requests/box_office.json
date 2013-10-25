@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/public/v1.0/lists/movies/box_office.json",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "params": {
+      "limit": 16,
+      "country": "us",
+      "apikey": "<%=ENV['ROTTEN_TOMATOES_API_KEY']%>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "body": {
+      "required": true
+    }
+  }
+}

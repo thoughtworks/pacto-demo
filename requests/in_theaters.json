@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/public/v1.0/lists/movies/in_theaters.json",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "params": {
+      "page_limit": 16,
+      "page": 1,
+      "country": "us",
+      "apikey": "<%=ENV['ROTTEN_TOMATOES_API_KEY']%>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "body": {
+      "required": true
+    }
+  }
+}

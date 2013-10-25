@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/public/v1.0/lists/dvds/top_rentals.json",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "params": {
+      "limit": 10,
+      "country": "us",
+      "apikey": "<%=ENV['ROTTEN_TOMATOES_API_KEY']%>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "body": {
+      "required": true
+    }
+  }
+}
