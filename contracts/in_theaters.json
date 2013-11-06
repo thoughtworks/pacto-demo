@@ -20,7 +20,8 @@
       "expires": "-1",
       "set-cookie": "JSESSIONID=141C48A0716D9BBC0890B0AC8D2E00DC.localhost; Path=/,ServerID=1336; Path=/",
       "vary": "User-Agent,Accept-Encoding",
-      "x-mashery-responder": "prod-j-worker-us-east-1b-36.mashery.com"
+      "x-mashery-responder": "prod-j-worker-us-east-1b-36.mashery.com",
+      "transfer-encoding": "chunked"
     },
     "status": 200,
     "body": {
