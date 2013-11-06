@@ -1,0 +1,9 @@
+# A sample Gemfile
+source 'https://rubygems.org'
+
+gem 'pacto', :git => 'https://github.com/thoughtworks/pacto', :branch => 'v0.3.0.rc'
+gem 'rake'
+gem 'vcr'
+gem 'rspec'
+gem 'octokit'
+gem 'pry'
