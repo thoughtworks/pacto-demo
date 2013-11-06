@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://json-schema.org/draft-03/schema
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 06 Nov 2013 20:21:00 GMT
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '3863'
+      Last-Modified:
+      - Wed, 16 Oct 2013 14:38:56 GMT
+      Connection:
+      - keep-alive
+      Expires:
+      - Wed, 06 Nov 2013 20:31:00 GMT
+      Cache-Control:
+      - max-age=600
+      Vary:
+      - Accept-Encoding
+      Accept-Ranges:
+      - bytes
+    body:
+      encoding: UTF-8
+      string: "{\n    \"$schema\": \"http://json-schema.org/draft-03/schema#\",\n
+        \   \"id\": \"http://json-schema.org/draft-03/schema#\",\n    \"type\": \"object\",\n
+        \   \n    \"properties\": {\n        \"type\": {\n            \"type\": [
+        \"string\", \"array\" ],\n            \"items\": {\n                \"type\":
+        [ \"string\", { \"$ref\": \"#\" } ]\n            },\n            \"uniqueItems\":
+        true,\n            \"default\": \"any\"\n        },\n        \n        \"properties\":
+        {\n            \"type\": \"object\",\n            \"additionalProperties\":
+        { \"$ref\": \"#\" },\n            \"default\": {}\n        },\n        \n
+        \       \"patternProperties\": {\n            \"type\": \"object\",\n            \"additionalProperties\":
+        { \"$ref\": \"#\" },\n            \"default\": {}\n        },\n        \n
+        \       \"additionalProperties\": {\n            \"type\": [ { \"$ref\": \"#\"
+        }, \"boolean\" ],\n            \"default\": {}\n        },\n        \n        \"items\":
+        {\n            \"type\": [ { \"$ref\": \"#\" }, \"array\" ],\n            \"items\":
+        { \"$ref\": \"#\" },\n            \"default\": {}\n        },\n        \n
+        \       \"additionalItems\": {\n            \"type\": [ { \"$ref\": \"#\"
+        }, \"boolean\" ],\n            \"default\": {}\n        },\n        \n        \"required\":
+        {\n            \"type\": \"boolean\",\n            \"default\": false\n        },\n
+        \       \n        \"dependencies\": {\n            \"type\": \"object\",\n
+        \           \"additionalProperties\": {\n                \"type\": [ \"string\",
+        \"array\", { \"$ref\": \"#\" } ],\n                \"items\": {\n                    \"type\":
+        \"string\"\n                }\n            },\n            \"default\": {}\n
+        \       },\n        \n        \"minimum\": {\n            \"type\": \"number\"\n
+        \       },\n        \n        \"maximum\": {\n            \"type\": \"number\"\n
+        \       },\n        \n        \"exclusiveMinimum\": {\n            \"type\":
+        \"boolean\",\n            \"default\": false\n        },\n        \n        \"exclusiveMaximum\":
+        {\n            \"type\": \"boolean\",\n            \"default\": false\n        },\n
+        \       \n        \"minItems\": {\n            \"type\": \"integer\",\n            \"minimum\":
+        0,\n            \"default\": 0\n        },\n        \n        \"maxItems\":
+        {\n            \"type\": \"integer\",\n            \"minimum\": 0\n        },\n
+        \       \n        \"uniqueItems\": {\n            \"type\": \"boolean\",\n
+        \           \"default\": false\n        },\n        \n        \"pattern\":
+        {\n            \"type\": \"string\",\n            \"format\": \"regex\"\n
+        \       },\n        \n        \"minLength\": {\n            \"type\": \"integer\",\n
+        \           \"minimum\": 0,\n            \"default\": 0\n        },\n        \n
+        \       \"maxLength\": {\n            \"type\": \"integer\"\n        },\n
+        \       \n        \"enum\": {\n            \"type\": \"array\",\n            \"minItems\":
+        1,\n            \"uniqueItems\": true\n        },\n        \n        \"default\":
+        {\n            \"type\": \"any\"\n        },\n        \n        \"title\":
+        {\n            \"type\": \"string\"\n        },\n        \n        \"description\":
+        {\n            \"type\": \"string\"\n        },\n        \n        \"format\":
+        {\n            \"type\": \"string\"\n        },\n        \n        \"divisibleBy\":
+        {\n            \"type\": \"number\",\n            \"minimum\": 0,\n            \"exclusiveMinimum\":
+        true,\n            \"default\": 1\n        },\n        \n        \"disallow\":
+        {\n            \"type\": [ \"string\", \"array\" ],\n            \"items\":
+        {\n                \"type\": [ \"string\", { \"$ref\": \"#\" } ]\n            },\n
+        \           \"uniqueItems\": true\n        },\n        \n        \"extends\":
+        {\n            \"type\": [ { \"$ref\": \"#\" }, \"array\" ],\n            \"items\":
+        { \"$ref\": \"#\" },\n            \"default\": {}\n        },\n        \n
+        \       \"id\": {\n            \"type\": \"string\",\n            \"format\":
+        \"uri\"\n        },\n        \n        \"$ref\": {\n            \"type\":
+        \"string\",\n            \"format\": \"uri\"\n        },\n        \n        \"$schema\":
+        {\n            \"type\": \"string\",\n            \"format\": \"uri\"\n        }\n
+        \   },\n    \n    \"dependencies\": {\n        \"exclusiveMinimum\": \"minimum\",\n
+        \       \"exclusiveMaximum\": \"maximum\"\n    },\n    \n    \"default\":
+        {}\n}\n"
+    http_version: 
+  recorded_at: Wed, 06 Nov 2013 20:21:00 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/thoughtworks/pacto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.beta+json
+      User-Agent:
+      - Octokit Ruby Gem 2.5.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 06 Nov 2013 20:20:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '51'
+      X-Ratelimit-Reset:
+      - '1383769917'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Last-Modified:
+      - Wed, 06 Nov 2013 17:32:09 GMT
+      Etag:
+      - '"3da035ef6bca1e3e124386e64827c6f2"'
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.beta; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+      X-Github-Request-Id:
+      - BD038792:6791:32E2BE4:527AA4AB
+    body:
+      encoding: UTF-8
+      string: '{"id":9921531,"name":"pacto","full_name":"thoughtworks/pacto","owner":{"login":"thoughtworks","id":18878,"avatar_url":"https://1.gravatar.com/avatar/e0bb26de7be810e5861c7e58e2e941d5?d=https%3A%2F%2Fidenticons.github.com%2F1021707194b6d060f75860a9fa6b73a2.png&r=x","gravatar_id":"e0bb26de7be810e5861c7e58e2e941d5","url":"https://api.github.com/users/thoughtworks","html_url":"https://github.com/thoughtworks","followers_url":"https://api.github.com/users/thoughtworks/followers","following_url":"https://api.github.com/users/thoughtworks/following{/other_user}","gists_url":"https://api.github.com/users/thoughtworks/gists{/gist_id}","starred_url":"https://api.github.com/users/thoughtworks/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/thoughtworks/subscriptions","organizations_url":"https://api.github.com/users/thoughtworks/orgs","repos_url":"https://api.github.com/users/thoughtworks/repos","events_url":"https://api.github.com/users/thoughtworks/events{/privacy}","received_events_url":"https://api.github.com/users/thoughtworks/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/thoughtworks/pacto","description":"Pacto
+        is a Ruby framework to help with Integration Contract Testing.","fork":true,"url":"https://api.github.com/repos/thoughtworks/pacto","forks_url":"https://api.github.com/repos/thoughtworks/pacto/forks","keys_url":"https://api.github.com/repos/thoughtworks/pacto/keys{/key_id}","collaborators_url":"https://api.github.com/repos/thoughtworks/pacto/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/thoughtworks/pacto/teams","hooks_url":"https://api.github.com/repos/thoughtworks/pacto/hooks","issue_events_url":"https://api.github.com/repos/thoughtworks/pacto/issues/events{/number}","events_url":"https://api.github.com/repos/thoughtworks/pacto/events","assignees_url":"https://api.github.com/repos/thoughtworks/pacto/assignees{/user}","branches_url":"https://api.github.com/repos/thoughtworks/pacto/branches{/branch}","tags_url":"https://api.github.com/repos/thoughtworks/pacto/tags","blobs_url":"https://api.github.com/repos/thoughtworks/pacto/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/thoughtworks/pacto/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/thoughtworks/pacto/git/refs{/sha}","trees_url":"https://api.github.com/repos/thoughtworks/pacto/git/trees{/sha}","statuses_url":"https://api.github.com/repos/thoughtworks/pacto/statuses/{sha}","languages_url":"https://api.github.com/repos/thoughtworks/pacto/languages","stargazers_url":"https://api.github.com/repos/thoughtworks/pacto/stargazers","contributors_url":"https://api.github.com/repos/thoughtworks/pacto/contributors","subscribers_url":"https://api.github.com/repos/thoughtworks/pacto/subscribers","subscription_url":"https://api.github.com/repos/thoughtworks/pacto/subscription","commits_url":"https://api.github.com/repos/thoughtworks/pacto/commits{/sha}","git_commits_url":"https://api.github.com/repos/thoughtworks/pacto/git/commits{/sha}","comments_url":"https://api.github.com/repos/thoughtworks/pacto/comments{/number}","issue_comment_url":"https://api.github.com/repos/thoughtworks/pacto/issues/comments/{number}","contents_url":"https://api.github.com/repos/thoughtworks/pacto/contents/{+path}","compare_url":"https://api.github.com/repos/thoughtworks/pacto/compare/{base}...{head}","merges_url":"https://api.github.com/repos/thoughtworks/pacto/merges","archive_url":"https://api.github.com/repos/thoughtworks/pacto/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/thoughtworks/pacto/downloads","issues_url":"https://api.github.com/repos/thoughtworks/pacto/issues{/number}","pulls_url":"https://api.github.com/repos/thoughtworks/pacto/pulls{/number}","milestones_url":"https://api.github.com/repos/thoughtworks/pacto/milestones{/number}","notifications_url":"https://api.github.com/repos/thoughtworks/pacto/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/thoughtworks/pacto/labels{/name}","releases_url":"https://api.github.com/repos/thoughtworks/pacto/releases{/id}","created_at":"2013-05-07T20:57:54Z","updated_at":"2013-11-06T17:32:09Z","pushed_at":"2013-11-06T17:32:03Z","git_url":"git://github.com/thoughtworks/pacto.git","ssh_url":"git@github.com:thoughtworks/pacto.git","clone_url":"https://github.com/thoughtworks/pacto.git","svn_url":"https://github.com/thoughtworks/pacto","homepage":"","size":1271,"stargazers_count":11,"watchers_count":11,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"forks_count":9,"mirror_url":null,"open_issues_count":10,"forks":9,"open_issues":10,"watchers":11,"default_branch":"master","master_branch":"master","organization":{"login":"thoughtworks","id":18878,"avatar_url":"https://1.gravatar.com/avatar/e0bb26de7be810e5861c7e58e2e941d5?d=https%3A%2F%2Fidenticons.github.com%2F1021707194b6d060f75860a9fa6b73a2.png&r=x","gravatar_id":"e0bb26de7be810e5861c7e58e2e941d5","url":"https://api.github.com/users/thoughtworks","html_url":"https://github.com/thoughtworks","followers_url":"https://api.github.com/users/thoughtworks/followers","following_url":"https://api.github.com/users/thoughtworks/following{/other_user}","gists_url":"https://api.github.com/users/thoughtworks/gists{/gist_id}","starred_url":"https://api.github.com/users/thoughtworks/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/thoughtworks/subscriptions","organizations_url":"https://api.github.com/users/thoughtworks/orgs","repos_url":"https://api.github.com/users/thoughtworks/repos","events_url":"https://api.github.com/users/thoughtworks/events{/privacy}","received_events_url":"https://api.github.com/users/thoughtworks/received_events","type":"Organization","site_admin":false},"parent":{"id":9918697,"name":"contracts","full_name":"abril/contracts","owner":{"login":"abril","id":526010,"avatar_url":"https://0.gravatar.com/avatar/85938b16ee92763b450dd4a5d2bbd0a0?d=https%3A%2F%2Fidenticons.github.com%2F02bb4b5923b6bb03c328be8342b1de55.png&r=x","gravatar_id":"85938b16ee92763b450dd4a5d2bbd0a0","url":"https://api.github.com/users/abril","html_url":"https://github.com/abril","followers_url":"https://api.github.com/users/abril/followers","following_url":"https://api.github.com/users/abril/following{/other_user}","gists_url":"https://api.github.com/users/abril/gists{/gist_id}","starred_url":"https://api.github.com/users/abril/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/abril/subscriptions","organizations_url":"https://api.github.com/users/abril/orgs","repos_url":"https://api.github.com/users/abril/repos","events_url":"https://api.github.com/users/abril/events{/privacy}","received_events_url":"https://api.github.com/users/abril/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/abril/contracts","description":"Contracts
+        is a Ruby implementation of the [Consumer-Driven Contracts](http://martinfowler.com/articles/consumerDrivenContracts.html)
+        pattern for evolving services. ","fork":false,"url":"https://api.github.com/repos/abril/contracts","forks_url":"https://api.github.com/repos/abril/contracts/forks","keys_url":"https://api.github.com/repos/abril/contracts/keys{/key_id}","collaborators_url":"https://api.github.com/repos/abril/contracts/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/abril/contracts/teams","hooks_url":"https://api.github.com/repos/abril/contracts/hooks","issue_events_url":"https://api.github.com/repos/abril/contracts/issues/events{/number}","events_url":"https://api.github.com/repos/abril/contracts/events","assignees_url":"https://api.github.com/repos/abril/contracts/assignees{/user}","branches_url":"https://api.github.com/repos/abril/contracts/branches{/branch}","tags_url":"https://api.github.com/repos/abril/contracts/tags","blobs_url":"https://api.github.com/repos/abril/contracts/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/abril/contracts/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/abril/contracts/git/refs{/sha}","trees_url":"https://api.github.com/repos/abril/contracts/git/trees{/sha}","statuses_url":"https://api.github.com/repos/abril/contracts/statuses/{sha}","languages_url":"https://api.github.com/repos/abril/contracts/languages","stargazers_url":"https://api.github.com/repos/abril/contracts/stargazers","contributors_url":"https://api.github.com/repos/abril/contracts/contributors","subscribers_url":"https://api.github.com/repos/abril/contracts/subscribers","subscription_url":"https://api.github.com/repos/abril/contracts/subscription","commits_url":"https://api.github.com/repos/abril/contracts/commits{/sha}","git_commits_url":"https://api.github.com/repos/abril/contracts/git/commits{/sha}","comments_url":"https://api.github.com/repos/abril/contracts/comments{/number}","issue_comment_url":"https://api.github.com/repos/abril/contracts/issues/comments/{number}","contents_url":"https://api.github.com/repos/abril/contracts/contents/{+path}","compare_url":"https://api.github.com/repos/abril/contracts/compare/{base}...{head}","merges_url":"https://api.github.com/repos/abril/contracts/merges","archive_url":"https://api.github.com/repos/abril/contracts/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/abril/contracts/downloads","issues_url":"https://api.github.com/repos/abril/contracts/issues{/number}","pulls_url":"https://api.github.com/repos/abril/contracts/pulls{/number}","milestones_url":"https://api.github.com/repos/abril/contracts/milestones{/number}","notifications_url":"https://api.github.com/repos/abril/contracts/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/abril/contracts/labels{/name}","releases_url":"https://api.github.com/repos/abril/contracts/releases{/id}","created_at":"2013-05-07T18:28:16Z","updated_at":"2013-10-25T23:07:19Z","pushed_at":"2013-05-23T19:48:28Z","git_url":"git://github.com/abril/contracts.git","ssh_url":"git@github.com:abril/contracts.git","clone_url":"https://github.com/abril/contracts.git","svn_url":"https://github.com/abril/contracts","homepage":null,"size":273,"stargazers_count":4,"watchers_count":4,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"forks_count":10,"mirror_url":null,"open_issues_count":1,"forks":10,"open_issues":1,"watchers":4,"default_branch":"master","master_branch":"master"},"source":{"id":9918697,"name":"contracts","full_name":"abril/contracts","owner":{"login":"abril","id":526010,"avatar_url":"https://0.gravatar.com/avatar/85938b16ee92763b450dd4a5d2bbd0a0?d=https%3A%2F%2Fidenticons.github.com%2F02bb4b5923b6bb03c328be8342b1de55.png&r=x","gravatar_id":"85938b16ee92763b450dd4a5d2bbd0a0","url":"https://api.github.com/users/abril","html_url":"https://github.com/abril","followers_url":"https://api.github.com/users/abril/followers","following_url":"https://api.github.com/users/abril/following{/other_user}","gists_url":"https://api.github.com/users/abril/gists{/gist_id}","starred_url":"https://api.github.com/users/abril/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/abril/subscriptions","organizations_url":"https://api.github.com/users/abril/orgs","repos_url":"https://api.github.com/users/abril/repos","events_url":"https://api.github.com/users/abril/events{/privacy}","received_events_url":"https://api.github.com/users/abril/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/abril/contracts","description":"Contracts
+        is a Ruby implementation of the [Consumer-Driven Contracts](http://martinfowler.com/articles/consumerDrivenContracts.html)
+        pattern for evolving services. ","fork":false,"url":"https://api.github.com/repos/abril/contracts","forks_url":"https://api.github.com/repos/abril/contracts/forks","keys_url":"https://api.github.com/repos/abril/contracts/keys{/key_id}","collaborators_url":"https://api.github.com/repos/abril/contracts/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/abril/contracts/teams","hooks_url":"https://api.github.com/repos/abril/contracts/hooks","issue_events_url":"https://api.github.com/repos/abril/contracts/issues/events{/number}","events_url":"https://api.github.com/repos/abril/contracts/events","assignees_url":"https://api.github.com/repos/abril/contracts/assignees{/user}","branches_url":"https://api.github.com/repos/abril/contracts/branches{/branch}","tags_url":"https://api.github.com/repos/abril/contracts/tags","blobs_url":"https://api.github.com/repos/abril/contracts/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/abril/contracts/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/abril/contracts/git/refs{/sha}","trees_url":"https://api.github.com/repos/abril/contracts/git/trees{/sha}","statuses_url":"https://api.github.com/repos/abril/contracts/statuses/{sha}","languages_url":"https://api.github.com/repos/abril/contracts/languages","stargazers_url":"https://api.github.com/repos/abril/contracts/stargazers","contributors_url":"https://api.github.com/repos/abril/contracts/contributors","subscribers_url":"https://api.github.com/repos/abril/contracts/subscribers","subscription_url":"https://api.github.com/repos/abril/contracts/subscription","commits_url":"https://api.github.com/repos/abril/contracts/commits{/sha}","git_commits_url":"https://api.github.com/repos/abril/contracts/git/commits{/sha}","comments_url":"https://api.github.com/repos/abril/contracts/comments{/number}","issue_comment_url":"https://api.github.com/repos/abril/contracts/issues/comments/{number}","contents_url":"https://api.github.com/repos/abril/contracts/contents/{+path}","compare_url":"https://api.github.com/repos/abril/contracts/compare/{base}...{head}","merges_url":"https://api.github.com/repos/abril/contracts/merges","archive_url":"https://api.github.com/repos/abril/contracts/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/abril/contracts/downloads","issues_url":"https://api.github.com/repos/abril/contracts/issues{/number}","pulls_url":"https://api.github.com/repos/abril/contracts/pulls{/number}","milestones_url":"https://api.github.com/repos/abril/contracts/milestones{/number}","notifications_url":"https://api.github.com/repos/abril/contracts/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/abril/contracts/labels{/name}","releases_url":"https://api.github.com/repos/abril/contracts/releases{/id}","created_at":"2013-05-07T18:28:16Z","updated_at":"2013-10-25T23:07:19Z","pushed_at":"2013-05-23T19:48:28Z","git_url":"git://github.com/abril/contracts.git","ssh_url":"git@github.com:abril/contracts.git","clone_url":"https://github.com/abril/contracts.git","svn_url":"https://github.com/abril/contracts","homepage":null,"size":273,"stargazers_count":4,"watchers_count":4,"language":"Ruby","has_issues":true,"has_downloads":true,"has_wiki":true,"forks_count":10,"mirror_url":null,"open_issues_count":1,"forks":10,"open_issues":1,"watchers":4,"default_branch":"master","master_branch":"master"},"network_count":10,"subscribers_count":41}'
+    http_version: 
+  recorded_at: Wed, 06 Nov 2013 20:21:00 GMT
+recorded_with: VCR 2.7.0
