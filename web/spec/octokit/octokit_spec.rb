@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe 'Octokit' do
 
-  context 'Repositories' do
+  context 'Repositories', :vcr do
 
     it 'should include pacto in thoughtworks repos' do
-      something = Octokit.repo 'thoughtworks/pacto'
-      expect(something.name).to eql('pacto')
+      repository = Octokit.repo 'thoughtworks/pacto'
+      expect(repository.name).to eql('pacto')
     end
 
   end

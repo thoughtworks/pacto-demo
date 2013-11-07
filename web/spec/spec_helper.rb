@@ -18,10 +18,13 @@ if ENV['PACTO_MODE'] == 'validate'
     host = File.basename host
     Pacto.load_all host, "https://#{host}"
   end
-  Pacto.use :default
+  Pacto.use :default, {:name => pacto, :created_at => "2013-05-07T18:28:16Z", :updated_at => "2013-10-25T23:07:19Z", :pushed_at => "2013-05-23T19:48:28Z"}
   # HACK: Shouldn't need to create then uncreate stubs
   WebMock.reset!
   Pacto.validate!
+elsif  ENV['PACTO_MODE'] == 'stub'
+  Octokit.api_endpoint = 'http://localhost:9000'
+  Octokit.web_endpoint = 'http://localhost:9000'
 else
   Pacto.generate!
 end
@@ -30,12 +33,8 @@ RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
-
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
   config.order = 'random'
+  config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
 VCR.configure do |c|
@@ -43,12 +42,4 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.configure_rspec_metadata!
   c.allow_http_connections_when_no_cassette = true
-end
-
-
-
-RSpec.configure do |c|
-  # so we can use :vcr rather than :vcr => true;
-  # in RSpec 3 this will no longer be necessary.
-  c.treat_symbols_as_metadata_keys_with_true_values = true
 end
