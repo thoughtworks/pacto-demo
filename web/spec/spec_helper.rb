@@ -13,18 +13,23 @@ Pacto.configure do |c|
   c.strict_matchers = false
 end
 
-if ENV['PACTO_MODE'] == 'validate'
+def load_contracts
   Dir['spec/contracts/*'].each do |host|
     host = File.basename host
     Pacto.load_all host, "https://#{host}"
   end
-  Pacto.use :default, {:name => pacto, :created_at => "2013-05-07T18:28:16Z", :updated_at => "2013-10-25T23:07:19Z", :pushed_at => "2013-05-23T19:48:28Z"}
+end
+
+if ENV['PACTO_MODE'] == 'validate'
+  load_contracts
+  Pacto.use :default
   # HACK: Shouldn't need to create then uncreate stubs
   WebMock.reset!
   Pacto.validate!
 elsif  ENV['PACTO_MODE'] == 'stub'
-  Octokit.api_endpoint = 'http://localhost:9000'
-  Octokit.web_endpoint = 'http://localhost:9000'
+  load_contracts
+  Pacto.use :default, {:name => "pacto", :time=> "2013-05-07T18:28:16Z"}
+  VCR.turn_off!
 else
   Pacto.generate!
 end
@@ -37,9 +42,12 @@ RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
 end
 
-VCR.configure do |c|
-  c.cassette_library_dir = 'spec/cassettes'
-  c.hook_into :webmock
-  c.configure_rspec_metadata!
-  c.allow_http_connections_when_no_cassette = true
+unless ENV['PACTO_MODE'] == 'stub'
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/cassettes'
+    c.hook_into :webmock
+    c.configure_rspec_metadata!
+    c.allow_http_connections_when_no_cassette = true
+    c.default_cassette_options = { :erb => {:id => 'tarso'} }
+  end
 end

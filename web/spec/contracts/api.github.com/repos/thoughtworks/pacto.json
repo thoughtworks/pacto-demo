@@ -10,24 +10,15 @@
   "response": {
     "headers": {
       "Content-Type": "application/json; charset=utf-8",
-      "Transfer-Encoding": "chunked",
       "Status": "200 OK",
-      "X-Ratelimit-Limit": "60",
-      "X-Ratelimit-Remaining": "58",
-      "X-Ratelimit-Reset": "1383853395",
       "Cache-Control": "public, max-age=60, s-maxage=60",
-      "Last-Modified": "Wed, 06 Nov 2013 21:01:20 GMT",
-      "Etag": "\"181f7705eba27dcbfe510dc5e7d666d1\"",
       "Vary": [
         "Accept",
         "Accept-Encoding"
       ],
-      "X-Github-Media-Type": "github.beta; format=json",
-      "X-Content-Type-Options": "nosniff",
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Expose-Headers": "ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes",
-      "Access-Control-Allow-Origin": "*",
-      "X-Github-Request-Id": "BD038792:77B2:63201FA:527BE7D7"
+      "Access-Control-Allow-Origin": "*"
     },
     "status": 200,
     "body": {
@@ -42,7 +33,8 @@
         },
         "name": {
           "type": "string",
-          "required": true
+          "required": true,
+          "default": "<%= name %>"
         },
         "full_name": {
           "type": "string",
@@ -284,15 +276,18 @@
         },
         "created_at": {
           "type": "string",
-          "required": true
+          "required": true,
+          "default": "<%= time %>"
         },
         "updated_at": {
           "type": "string",
-          "required": true
+          "required": true,
+          "default": "<%= time %>"
         },
         "pushed_at": {
           "type": "string",
-          "required": true
+          "required": true,
+          "default": "<%= time %>"
         },
         "git_url": {
           "type": "string",
@@ -698,15 +693,18 @@
             },
             "created_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "updated_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "pushed_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "git_url": {
               "type": "string",
@@ -1038,15 +1036,18 @@
             },
             "created_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "updated_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "pushed_at": {
               "type": "string",
-              "required": true
+              "required": true,
+              "default": "<%= time %>"
             },
             "git_url": {
               "type": "string",
