@@ -10,17 +10,29 @@
   "response": {
     "headers": {
       "Content-Type": "application/json; charset=utf-8",
+      "Transfer-Encoding": "chunked",
       "Status": "200 OK",
+      "X-Ratelimit-Limit": "60",
+      "X-Ratelimit-Remaining": "58",
+      "X-Ratelimit-Reset": "1383853395",
+      "Cache-Control": "public, max-age=60, s-maxage=60",
+      "Last-Modified": "Wed, 06 Nov 2013 21:01:20 GMT",
+      "Etag": "\"181f7705eba27dcbfe510dc5e7d666d1\"",
       "Vary": [
         "Accept",
         "Accept-Encoding"
       ],
-      "X-Github-Media-Type": "github.beta; format=json"
+      "X-Github-Media-Type": "github.beta; format=json",
+      "X-Content-Type-Options": "nosniff",
+      "Access-Control-Allow-Credentials": "true",
+      "Access-Control-Expose-Headers": "ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes",
+      "Access-Control-Allow-Origin": "*",
+      "X-Github-Request-Id": "BD038792:77B2:63201FA:527BE7D7"
     },
     "status": 200,
     "body": {
       "$schema": "http://json-schema.org/draft-03/schema#",
-      "description": "Generated from vcr with shasum 2b6dcf0506f2a3a4f4f5417716a63673322cff0f",
+      "description": "Generated from vcr with shasum 35e2f3dcfe2892b0954f504e1fa41d5cb1616be6",
       "type": "object",
       "required": true,
       "properties": {
